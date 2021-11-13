@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Text Utils</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome to Text Utils!</h1>
+    <form action="analyzetext" method="get">
+        <h3>Enter your Text</h3>
+        <textarea name="text" style="margin: 0px;width: 294px;height: 138px;"></textarea>
+        <br>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="switch1" name="removepunc">
+            <label class="custom-control-label" for="switch1">Remove Punctuations</label>
+        </div>
+        <input name="uppercase" type="checkbox"> UPPERCASE
+        <br>
+        <input name="capatilize" type="checkbox"> Capatilize
+        <br>
+        <input name="spaceremover" type="checkbox"> Remove Space
+        <br>
+        <input name="count" type="checkbox"> Letter Count
+        <br>
+        <button type="submit">Analyze Text</button>
+    </form>
+</div>
+
+</body>
+</html>
