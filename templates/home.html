@@ -1,36 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <title>Text Utils</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<div class="container">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Text Utils</title>
+  </head>
+  <body class="">
+    <div class="container">
     <h1>Welcome to Text Utils!</h1>
-    <form action="analyzetext" method="get">
+    <form action="analyzetext" method="post">
+        {% csrf_token %}
         <h3>Enter your Text</h3>
-        <textarea name="text" style="margin: 0px;width: 294px;height: 138px;"></textarea>
+        <textarea name="text" style="margin: 0px;width: 294px;height: 138px;" required></textarea>
         <br>
         <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="switch1" name="removepunc">
-            <label class="custom-control-label" for="switch1">Remove Punctuations</label>
+            <input type="checkbox" class="custom-control-input" name="removepunc" id="customSwitch1">
+            <label class="custom-control-label" for="customSwitch1">Remove Punctuation</label>
         </div>
-        <input name="uppercase" type="checkbox"> UPPERCASE
-        <br>
-        <input name="capatilize" type="checkbox"> Capatilize
-        <br>
-        <input name="spaceremover" type="checkbox"> Remove Space
-        <br>
-        <input name="count" type="checkbox"> Letter Count
-        <br>
-        <button type="submit">Analyze Text</button>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" name="uppercase" id="customSwitch2">
+            <label class="custom-control-label" for="customSwitch2">UPPERCASE</label>
+        </div>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" name="capatilize" id="customSwitch3">
+            <label class="custom-control-label" for="customSwitch3">Capatilize</label>
+        </div>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" name="spaceremover" id="customSwitch4">
+            <label class="custom-control-label" for="customSwitch4">Remove Space</label>
+        </div>
+        <button type="submit" class="btn btn-dark mt-3">Analyze Text</button>
     </form>
-</div>
-
-</body>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
 </html>
+
+
+
+
+
+
+
